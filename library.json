@@ -1,14 +1,23 @@
 {
-  "name": "XPT2046_Touchscreen",
+  "name": "XPT2046_Bitbang",
   "version": "1.4",
   "keywords": "display, tft, lcd, graphics, spi, touchscreen",
-  "description": "Touchscreens using the XPT2046 controller chip. Many very low cost color TFT displays with touch screens have this chip.",
+  "description": "A fork of XPT2046_Touchscreen by Paul Stoffregen using software-based SPI with additional enhancements.",
   "exclude": "doc",
-  "repository":
-  {
+  "repository": {
     "type": "git",
-    "url": "https://github.com/PaulStoffregen/XPT2046_Touchscreen.git"
+    "url": "https://github.com/luckasRanarison/XPT2046_Bitbang.git"
   },
+  "authors": [
+    {
+      "name": "Paul Stoffregen"
+    },
+    {
+      "name": "Luckas Ranarison",
+      "email": "luckasranarison@gmail.com",
+      "maintainer": true
+    }
+  ],
   "frameworks": "arduino",
   "platforms": "*"
 }
