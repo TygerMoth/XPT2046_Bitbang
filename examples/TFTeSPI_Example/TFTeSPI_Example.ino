@@ -1,3 +1,4 @@
+/*
  * ******************** *
  * TFTeSPI_Example.ino  *
  * Author: Larry Coffey *
