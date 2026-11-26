@@ -1,5 +1,5 @@
  * ******************** *
- * TFTeSPI_Example.ino *
+ * TFTeSPI_Example.ino  *
  * Author: Larry Coffey *
  *   Date: 2026-11-20   *
  * ******************** *
