@@ -30,7 +30,7 @@ uint16_t TS_MAXX = 3670;
 uint16_t TS_MINY = 280;
 uint16_t TS_MAXY = 3820;
 
-#define DEFAULT_ROTATION 3
+#define DEFAULT_ROTATION 3 // Landscape inverted
 
 // Global Objects
 extern TFT_eSPI tft;
@@ -60,7 +60,7 @@ void initDisplay() {
 
 void initTouch() {
   ts.begin();
-  ts.setRotation(DEFAULT_ROTATION);
+  ts.setRotation(DEFAULT_ROTATION); // match display
   ts.setDimensions(240, 320); // Width, Height
   ts.setCalibration(TS_MINX, TS_MAXX, TS_MINY, TS_MAXY);
   //ts.setCalibration(0,4095, 0, 4095); //
@@ -70,7 +70,7 @@ void initTouch() {
 #define ry 
 void calibrateTouch() {  // Touch Screen Calibration function displays your settings for TS_MINX and TS_MAXX etc.
   int16_t minX = 9999, maxX = 0, minY = 9999, maxY = 0, x = 0, y = 0, xRaw = 0, yRaw = 0;
-  tft.setRotation(3); // Use LANDSCAPE to calibrate 1 or 3
+  tft.setRotation(3); // Force LANDSCAPE to calibrate (1 or 3)
   int rot = tft.getRotation();
   int landscape = rot % 2;
 
@@ -143,7 +143,7 @@ void calibrateTouch() {  // Touch Screen Calibration function displays your sett
   //TS_MAXX = maxX;
   //TS_MINY = minY;
   //TS_MAXY = maxY;
-  calibrated = true;  // Set to false to show calibration values
+  calibrated = true;  // Adjust values @ line 26-31 for setCalibration() function call @ line 65
   tft.fillScreen(TFT_BLACK);
   tft.setRotation(DEFAULT_ROTATION);
   tft.setTextColor(TFT_YELLOW);
